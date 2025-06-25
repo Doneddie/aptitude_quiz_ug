@@ -1,0 +1,16 @@
+asgiref==3.8.1
+certifi==2025.4.26
+Django==5.2
+django-allauth==65.7.0
+django-bootstrap5==25.1
+django-browser-reload==1.18.0
+django-debug-toolbar==5.1.0
+django-tailwind==4.0.1
+pillow==11.2.1
+python-decouple==3.8
+python-http-client==3.3.7
+sendgrid==3.6.5
+sendgrid-django==4.2.0
+sqlparse==0.5.3
+tzdata==2025.2
+whitenoise==6.9.0
