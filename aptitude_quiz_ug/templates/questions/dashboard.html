@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container mt-4">
+    <h3>My Quiz History</h3>
+    <table class="table table-bordered mt-3">
+        <thead>
+            <tr>
+                <th>Category</th>
+                <th>Score</th>
+                <th>Total</th>
+                <th>Percentage</th>
+                <th>Date Taken</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for result in results %}
+            <tr>
+                <td>{{ result.category|capfirst }}</td>
+                <td>{{ result.score }}</td>
+                <td>{{ result.total }}</td>
+                <td>{{ result.percentage }}%</td>
+                <td>{{ result.date_taken|date:"M d, Y H:i" }}</td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="5" class="text-center">No quiz taken yet.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

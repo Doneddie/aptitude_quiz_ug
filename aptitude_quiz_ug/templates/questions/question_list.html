@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2 class="mb-3">All Questions</h2>
+    <a href="{% url 'question_create' %}" class="btn btn-primary mb-3">Add New Question</a>
+    <ul class="list-group">
+        {% for question in questions %}
+            <li class="list-group-item">{{ question.question_text|truncatechars:100 }}</li>
+        {% empty %}
+            <li class="list-group-item">No questions added yet.</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'start_quiz' 'numerical' %}" class="btn btn-success">Start Numerical Quiz</a>
+    <a href="{% url 'start_quiz' 'verbal' %}" class="btn btn-success">Start Verbal Quiz</a>
+    <a href="{% url 'start_quiz' 'logic' %}" class="btn btn-success">Start Logical Quiz</a>
+    <a href="{% url 'start_quiz' 'gk' %}" class="btn btn-success">Start General Knowledge Quiz</a>
+</div>
+{% endblock %}

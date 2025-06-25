@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container mt-5 text-center">
+    <h2 class="text-success">Quiz Completed!</h2>
+    <p class="fs-4">You scored {{ score }} out of {{ total }} ({{ percentage }}%)</p>
+    <a href="/" class="btn btn-outline-primary mt-3">Back to Home</a>
+</div>
+{% endblock %}
